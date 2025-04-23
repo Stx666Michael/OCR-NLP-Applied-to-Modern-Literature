@@ -24,6 +24,8 @@ The OCR pipeline consists of three main modules:
 
 Synthetic datasets were generated to train detection and recognition models, simulating the visual style and layout of *The Ladies’ Journal*. The OCR system outperforms state-of-the-art tools (PaddleOCR, EasyOCR, Tesseract, Apple Preview) on this challenging dataset.
 
+![OCR system architecture](./images/AR1.png)
+
 ### NLP Analysis
 
 After digitization, the text is processed using a custom NLP pipeline:
@@ -34,6 +36,8 @@ After digitization, the text is processed using a custom NLP pipeline:
 - **Topic Modeling**: Apply LDA to classify documents into five main themes: Daily Life and Consumption, Economic and Social Status, Education and Culture, Family, Love and Marriage, and Health and Medicine.
 - **Trend Analysis**: Use DeBERTa-v3-large for multi-dimensional sentiment and keyword trend analysis over time.
 
+![NLP system architecture](./images/AR2.png)
+
 ## Results
 
 - The OCR system achieves over 90% recognition accuracy on high-confidence pages, with an average inference speed of 2.88s/image (GPU).
@@ -41,6 +45,9 @@ After digitization, the text is processed using a custom NLP pipeline:
 - LDA topic modeling reveals five major themes in the journal, with significant growth in discussions of women’s economic and social status after 1919.
 - Trend analysis shows a shift from traditional family roles to modern views on love, marriage, and social participation.
 - The NLP framework enables customizable keyword analysis, supporting flexible exploration of gender discourse trends.
+
+![OCR system results](./images/UI1.png)
+![NLP system results](./images/UI2.png)
 
 ## Getting Started
 
